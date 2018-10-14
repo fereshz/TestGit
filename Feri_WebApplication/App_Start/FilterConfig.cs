@@ -16,7 +16,7 @@ namespace Feri_WebApplication.App_Start
         {
             filters.Add(new Infrastructor.LogAttribute());
 
-        }
+        }//hello
         
     }
 }
