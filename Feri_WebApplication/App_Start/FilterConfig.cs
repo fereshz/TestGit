@@ -14,6 +14,7 @@ namespace Feri_WebApplication.App_Start
 
         public static void RegisterGlobalFilter(System.Web.Mvc.GlobalFilterCollection filters)
         {
+            filters.Add(new Infrastructor.LogAttribute());
 
         }
         
