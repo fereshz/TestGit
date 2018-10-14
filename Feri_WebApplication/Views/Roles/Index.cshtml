@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Models.Role>
+
+@{
+	string title = "Roles List";
+
+	ViewBag.Title = title;
+	//Layout = "~/Views/Shared/Layouts/_Layout_Default.cshtml";
+}
+
+<h2>
+	@(title)
+</h2>
+
+<div class="row">
+	<div class=" col-xs-12">
+		@Html.ActionLink("Create New Role", MVC.Roles.Create())
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 table-responsive">
+		<table class="table table-bordered table-condensed table-striped table-hover">
+			<tr>
+				<th>
+					#
+				</th>
+				<th>
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.IsActive)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Name)
+				</th>
+				<th></th>
+			</tr>
+
+			@{
+				int Index = 0;
+			}
+			@foreach (var item in Model)
+			{
+				Index++;
+
+				<tr>
+					<td>
+						@Index
+					</td>
+					<td>
+						@Html.ActionLink("Details", MVC.Roles.Details(item.Id))
+						|
+						@Html.ActionLink("Edit", MVC.Roles.Edit(item.Id))
+						|
+						@Html.ActionLink("Delete", MVC.Roles.Delete(item.Id))
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.IsActive)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Name)
+					</td>
+				</tr>
+			}
+
+		</table>
+	</div>
+</div>

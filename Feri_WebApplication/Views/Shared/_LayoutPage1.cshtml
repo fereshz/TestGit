@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	<title>@ViewBag.Title</title>
+	@RenderSection(name: "Stylesection", required: false)
+	<script src="~/Scripts/jquery-3.0.0.min.js"></script>
+	<script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+	<style>
+		h2{
+			color:yellow;
+		}
+	</style>
+    <div>
+        @RenderBody()
+    </div>
+	<h2>
+		@RenderSection(name:"Mysection",required:false)
+	</h2>
+</body>
+</html>

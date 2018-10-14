@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+
+}
+
+<h2>Test</h2>
+
+<h3>
+	@ViewBag.mybag
+</h3>
+@Html.ActionLink(linkText: "go to link", routeValues:new { Area="MyArea"},htmlAttributes:null,controllerName:"MyHome" ,actionName: "MyIndex");
+
