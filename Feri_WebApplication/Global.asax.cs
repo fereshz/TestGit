@@ -11,6 +11,7 @@ namespace Feri_WebApplication
     {
         protected void Application_Start()
         {
+            FilterConfig.RegisterGlobalFilter(System.Web.Mvc.GlobalFilters.Filters);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

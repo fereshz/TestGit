@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Feri_WebApplication.App_Start
+namespace Feri_WebApplication
 {
     public static class FilterConfig
     {
